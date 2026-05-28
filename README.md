@@ -1,3 +1,11 @@
+---
+title: Talk With Philosophers
+emoji: 🧠
+colorFrom: blue
+colorTo: purple
+sdk: docker
+pinned: false
+---
 # PhiloAgents API
 
 Check the [INSTALL_AND_USAGE.md](../INSTALL_AND_USAGE.md) file for instructions on how to install and use the API.
