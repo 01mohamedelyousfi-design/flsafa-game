@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: philoagents-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    region: frankfurt          # closest to MENA / Europe users
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false            # Set manually in Render dashboard
+      - key: MONGODB_URI
+        sync: false            # Set manually in Render dashboard
+      - key: OPIK_API_KEY
+        sync: false            # Optional — for LangChain tracing
+      - key: PORT
+        value: 8000
+    autoDeploy: true
