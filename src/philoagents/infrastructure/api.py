@@ -46,6 +46,14 @@ class ChatMessage(BaseModel):
     philosopher_id: str
 
 
+@app.get("/")
+async def root():
+    """Redirect to Swagger UI documentation."""
+    from fastapi.responses import RedirectResponse
+    return RedirectResponse(url="/docs")
+
+
+
 @app.get("/health")
 async def health_check():
     """Health check endpoint used by Render / Railway."""
